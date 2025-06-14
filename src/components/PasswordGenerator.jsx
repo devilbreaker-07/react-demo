@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 
  const PasswordGenerator = () => {
@@ -28,14 +28,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 
 
 
-                    const inputRef=useRef()
-
-
-
-                    const copyClipboard=()=>{
-                        window.navigator.clipboard.writeText(password)                       
-                    }
-
+                   
 
 
                 useEffect(()=>{
@@ -45,7 +38,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 
 
   return (
-                <div className='bg-black w-full h-screen flex justify-center  container'>
+                <div className='bg-black w-full h-screen flex justify-center  '>
                     <div className=' flex flex-col w-1/3 h-[100px] bg-gray-600 mt-10 rounded-md'>
                                 <div className="flex justify-center text-white ">
                                     <h1>Password generator</h1>
@@ -56,7 +49,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
                                                  value={password} className="w-3/5 h-5 text-amber-700 rounded-sm" readOnly  placeholder="password"/>
 
                                                 <div className="flex justify-center align-middle mb-5">
-                                                     <button className="bg-blue-600 text-white  h-5 rounded-sm text-sm outline-none" ref={inputRef} onClick={copyClipboard}>copy</button>
+                                                     <button className="bg-blue-300 text-white hover:bg-blue-500  h-5 rounded-sm text-sm outline-none" >copy</button>
                                                 </div>
                                            
                                             
